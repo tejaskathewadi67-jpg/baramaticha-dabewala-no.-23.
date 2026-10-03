@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="बारामतीचा डबेवाला — घरगुती चव, ताजा आणि स्वादिष्ट डबा. लोहेगाव, पुणे.">
+  <title>बारामतीचा डबेवाला | घरगुती चव, मनापासून सेवा</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --red:#c9162d;
+      --dark:#8f1021;
+      --cream:#fff8f5;
+      --white:#fff;
+      --text:#241b1d;
+      --muted:#75676a;
+      --gold:#f2b544;
+      --shadow:0 18px 45px rgba(93,18,28,.15);
+      --radius:24px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"Noto Sans Devanagari","Baloo 2",system-ui,sans-serif;
+      color:var(--text);
+      background:var(--cream);
+      line-height:1.65;
+    }
+    a{text-decoration:none;color:inherit}
+    .topbar{
+      background:var(--dark);color:#fff;text-align:center;padding:7px 15px;
+      font-size:14px;font-weight:600;letter-spacing:.2px;
+    }
+    header{
+      position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);
+      backdrop-filter:blur(10px);border-bottom:1px solid #f0dfe0;
+    }
+    .nav{
+      max-width:1180px;margin:auto;padding:12px 22px;display:flex;align-items:center;
+      justify-content:space-between;gap:20px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--red)}
+    .brand img{width:58px;height:58px;border-radius:16px;object-fit:cover;border:3px solid #fff;box-shadow:0 5px 18px rgba(0,0,0,.12)}
+    .brand span{font-family:"Baloo 2";font-size:23px;line-height:1.05}
+    .navlinks{display:flex;gap:25px;align-items:center;font-weight:700;font-size:15px}
+    .navlinks a:hover{color:var(--red)}
+    .navcta{background:var(--red);color:#fff;padding:10px 18px;border-radius:999px;box-shadow:0 8px 20px rgba(201,22,45,.22)}
+    .hero{
+      max-width:1180px;margin:0 auto;padding:55px 22px 50px;display:grid;
+      grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;
+    }
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#ffe8eb;color:var(--red);
+      padding:7px 13px;border-radius:999px;font-weight:800;font-size:14px;margin-bottom:17px}
+    h1{font-family:"Baloo 2";font-size:clamp(44px,6vw,76px);line-height:.98;color:var(--red);margin-bottom:18px}
+    .hero h1 span{color:#221719}
+    .hero p{font-size:19px;color:var(--muted);max-width:590px;margin-bottom:25px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:13px;font-weight:800;border:2px solid transparent;transition:.2s}
+    .btn-primary{background:var(--red);color:#fff;box-shadow:0 10px 25px rgba(201,22,45,.2)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-outline{border-color:var(--red);color:var(--red);background:#fff}
+    .hero-card{position:relative;background:#fff;border-radius:34px;padding:15px;box-shadow:var(--shadow);overflow:hidden}
+    .hero-card:before{content:"";position:absolute;inset:0;border:7px solid #fff;border-radius:34px;pointer-events:none}
+    .hero-card img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:25px;display:block}
+    .badge{position:absolute;right:28px;bottom:28px;background:var(--red);color:#fff;padding:12px 18px;border-radius:16px;font-weight:800;box-shadow:0 12px 25px rgba(0,0,0,.22)}
+    .section{padding:72px 22px}
+    .section-inner{max-width:1180px;margin:auto}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 35px}
+    .section-head h2{font-family:"Baloo 2";font-size:42px;color:var(--red);line-height:1.1;margin-bottom:8px}
+    .section-head p{color:var(--muted)}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:0 10px 30px rgba(74,20,28,.08);border:1px solid #f3dddd}
+    .icon{width:52px;height:52px;display:grid;place-items:center;background:#ffe8eb;border-radius:15px;font-size:25px;margin-bottom:15px}
+    .feature h3{font-family:"Baloo 2";font-size:24px;margin-bottom:5px}
+    .feature p{color:var(--muted);font-size:15px}
+    .menu-preview{background:#fff0f1}
+    .menu-box{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .menu-card{background:#fff;border-radius:20px;padding:24px;border:1px solid #f0d4d7;box-shadow:0 8px 25px rgba(80,20,30,.06)}
+    .menu-card .tag{color:var(--red);font-size:13px;font-weight:800}
+    .menu-card h3{font-family:"Baloo 2";font-size:25px;margin:6px 0}
+    .menu-card p{color:var(--muted);font-size:14px}
+    .menu-note{text-align:center;margin-top:24px;color:var(--dark);font-weight:700}
+    .location{
+      display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch
+    }
+    .contact-card,.map-card{background:#fff;border-radius:26px;padding:30px;box-shadow:0 10px 30px rgba(74,20,28,.08);border:1px solid #f3dddd}
+    .contact-card h2{font-family:"Baloo 2";font-size:36px;color:var(--red);margin-bottom:8px}
+    .contact-item{display:flex;gap:14px;margin-top:20px;align-items:flex-start}
+    .contact-icon{width:44px;height:44px;flex:0 0 44px;border-radius:13px;background:#ffe8eb;display:grid;place-items:center}
+    .contact-item strong{display:block;margin-bottom:2px}
+    .contact-item span,.contact-item a{color:var(--muted);font-size:15px}
+    .map-card{min-height:330px;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,#fff,#ffe9eb)}
+    .map-pin{font-size:52px;margin-bottom:8px}
+    footer{background:#7f0d1c;color:#fff;padding:30px 22px}
+    .footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .footer-inner p{opacity:.85;font-size:14px}
+    .float-call{position:fixed;right:20px;bottom:20px;background:var(--red);color:#fff;border-radius:999px;padding:13px 18px;font-weight:800;box-shadow:0 12px 30px rgba(0,0,0,.2);z-index:30}
+    @media(max-width:850px){
+      .navlinks a:not(.navcta){display:none}
+      .hero{grid-template-columns:1fr;padding-top:38px}
+      .hero-card{max-width:520px;margin:auto}
+      .features,.menu-box{grid-template-columns:1fr}
+      .location{grid-template-columns:1fr}
+      .section{padding:55px 18px}
+    }
+    @media(max-width:520px){
+      .nav{padding:9px 14px}.brand img{width:48px;height:48px}.brand span{font-size:19px}
+      .navcta{padding:8px 13px;font-size:13px}
+      .hero{padding:35px 17px 42px;gap:30px}
+      h1{font-size:48px}.hero p{font-size:17px}
+      .btn{width:100%}
+      .section-head h2{font-size:36px}
+      .contact-card,.map-card{padding:23px}
+      .footer-inner{flex-direction:column;text-align:center}
+      .float-call{right:12px;bottom:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">🍱 घरगुती चव • ताजा डबा • मनापासून सेवा</div>
+
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#">
+        <img src="logo.jpg" alt="बारामतीचा डबेवाला लोगो">
+        <span>बारामतीचा<br>डबेवाला</span>
+      </a>
+      <div class="navlinks">
+        <a href="#about">आमच्याबद्दल</a>
+        <a href="#menu">डबा</a>
+        <a href="#contact">संपर्क</a>
+        <a class="navcta" href="tel:9022648448">📞 कॉल करा</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">❤️ घरच्या चवीचा डबा</div>
+        <h1>बारामतीचा<br><span>डबेवाला</span></h1>
+        <p>लोहेगाव, पुण्यात घरगुती चवीचा, ताजा आणि स्वादिष्ट डबा. रोजच्या जेवणात घरची चव आणि आपुलकी!</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="tel:9022648448">📞 9022648448</a>
+          <a class="btn btn-outline" href="https://wa.me/917262808334?text=नमस्कार%20बारामतीचा%20डबेवाला%2C%20मला%20डब्याबद्दल%20माहिती%20हवी%20आहे." target="_blank">💬 WhatsApp करा</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="logo.jpg" alt="बारामतीचा डबेवाला">
+        <div class="badge">आजच संपर्क करा!</div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2>आमची खासियत</h2>
+          <p>चांगलं जेवण म्हणजे फक्त पोट भरणं नाही — त्यात घरची चव आणि प्रेम असतं.</p>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <div class="icon">🍲</div>
+            <h3>घरगुती चव</h3>
+            <p>घरच्या स्वयंपाकाची आठवण करून देणारी साधी, चविष्ट आणि मनापासून बनवलेली जेवणाची चव.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">🥗</div>
+            <h3>ताजं आणि स्वादिष्ट</h3>
+            <p>रोजच्या जेवणासाठी ताज्या पदार्थांवर भर आणि स्वच्छतेची काळजी.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">❤️</div>
+            <h3>आपुलकीची सेवा</h3>
+            <p>ग्राहकांच्या सोयीचा विचार करून नम्र आणि विश्वासू सेवा देण्याचा प्रयत्न.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-preview" id="menu">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2>आजच्या डब्याची झलक</h2>
+          <p>पूर्ण मेन्यू लवकरच येथे अपडेट केला जाईल.</p>
+        </div>
+        <div class="menu-box">
+          <div class="menu-card">
+            <div class="tag">घरगुती</div>
+            <h3>पूर्ण जेवण</h3>
+            <p>पोळी • भाजी • डाळ/आमटी • भात • इतर पदार्थ</p>
+          </div>
+          <div class="menu-card">
+            <div class="tag">दैनिक</div>
+            <h3>डबा सेवा</h3>
+            <p>रोजच्या जेवणासाठी सोयीस्कर आणि चविष्ट डबा.</p>
+          </div>
+          <div class="menu-card">
+            <div class="tag">अपडेट होत आहे</div>
+            <h3>साप्ताहिक मेन्यू</h3>
+            <p>दररोजचा मेन्यू आणि दर येथे लवकरच उपलब्ध होतील.</p>
+          </div>
+        </div>
+        <div class="menu-note">📋 मेन्यू आणि किंमती लवकरच अपडेट केल्या जातील.</div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-inner">
+        <div class="location">
+          <div class="contact-card">
+            <h2>आजच संपर्क करा!</h2>
+            <p style="color:var(--muted)">डबा, मेन्यू किंवा उपलब्धतेबद्दल माहिती घेण्यासाठी कॉल किंवा WhatsApp करा.</p>
+
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div><strong>फोन</strong><a href="tel:9022648448">9022648448</a><br><a href="tel:7262808334">7262808334</a></div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div><strong>पत्ता</strong><span>D.Y. Patil Chowk, Axis Bank जवळ,<br>Nimbalkar Nagar Road, Lohegaon,<br>Pune - 411047</span></div>
+            </div>
+
+            <div class="buttons" style="margin-top:25px">
+              <a class="btn btn-primary" href="tel:9022648448">📞 कॉल करा</a>
+              <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=D.Y.+Patil+Chowk+Axis+Bank+Nimbalkar+Nagar+Road+Lohegaon+Pune+411047" target="_blank">📍 Google Maps</a>
+            </div>
+          </div>
+
+          <div class="map-card">
+            <div>
+              <div class="map-pin">📍</div>
+              <h3 style="font-family:'Baloo 2';font-size:30px;color:var(--red)">लोहेगाव, पुणे</h3>
+              <p style="color:var(--muted);max-width:360px;margin:6px auto 18px">D.Y. Patil Chowk • Axis Bank जवळ • Nimbalkar Nagar Road</p>
+              <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=D.Y.+Patil+Chowk+Axis+Bank+Nimbalkar+Nagar+Road+Lohegaon+Pune+411047" target="_blank">नकाशावर लोकेशन पाहा →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong style="font-family:'Baloo 2';font-size:23px">बारामतीचा डबेवाला</strong>
+        <p>घरच्या चवीचा डबा, लोहेगाव पुणे.</p>
+      </div>
+      <p>© 2026 बारामतीचा डबेवाला • सर्व हक्क राखीव</p>
+    </div>
+  </footer>
+
+  <a class="float-call" href="tel:9022648448">📞 कॉल करा</a>
+</body>
+</html>
